@@ -1,0 +1,176 @@
+// Welcome to https://minehutapi.notmycode.dev.
+
+// This is all of the Minehut API. (USE AT YOUR OWN RISK.)
+// I will not tell you how to use them because they can cause damage.
+// Most of them require authencation.
+
+// NOTE TO MINEHUT: If you wish to take this down. Please contact furriesgang on discord. We'll talk about this in private converstaion.
+// All of this infomation was public on your own website and dashboard.
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+
+// Latest Update: May 22th 2024.
+// Commonly Known
+
+https://api.minehut.com/v1/user/logout                                                  ||||      It does what the name says. Log you out.
+https://api.minehut.com/servers                                                         ||||      List All Online Server.
+https://api.minehut.com/server/{ServerName}?byName=true                                 ||||      Get Server Info using it's name.
+https://api.minehut.com/network/player/{PlayerUUID}/friends                             ||||      Looking at Others Friends List.
+https://api.minehut.com/network/players/distribution                                    ||||      List all online players on Minehut Proxy.
+(will update later)
+
+// Admin Only (These will not be public. as it can cause damage.)
+
+// ADMIN ADDONS
+/v1/merchandise/admin/products?managed=true                                             ||||      Not sure what this is but it's something about merchandise products.
+/v2/admin/manage_addons_presets                                                         ||||      This is for Managing Addons Presets.
+/v2/admin/manage_addons_presets/${_id}                                                  ||||      Removing Addons Presets.
+/v1/merchandise/admin/addons/update_server_versions                                     ||||      Updating Addons Server Versions?
+
+// ADMIN SERVER VERSIONS
+
+/v1/admin/server/versions                                                               ||||      Getting a list of Server Versions.
+
+// Admin Tasks for Servers
+
+/admin/${name}/expire                                                                   ||||      Possibility for making the server expired.
+
+// ADMIN TASKS FOR NETWORK
+
+/network/motd                                                                           ||||      Setting Velocity MOTD.
+/admin/new/user/stats                                                                   ||||      Creating New User?
+
+// ADMIN TASKS FOR WEBSITE
+
+/website/navbar/promotion                                                               ||||      This is for Updating the Promotion Text and Promotion Link.
+/website/transferring/promotion                                                         ||||      This is for Updating the Protomotion Video?
+
+// ADMIN TASKS FOR USERS
+
+/v2/admin/users?q=${search}&role=${role}&limit=${limit}&offset=${offset}                ||||      I don't know what this does. But it seem like it has to do something with Rate Limits and User Role.
+/v2/user/${id}?byUserId=true                                                            ||||      Getting User infomatio by ID
+/user/${email}?byEmail=true                                                             ||||      Getting User infomation by Email
+/user/${name}?byMinecraftName=true                                                      ||||      Getting User infomation by Minecraft Name
+/user/${userId}/credits                                                                 ||||      Check How many Credits User have by ID
+/user/${email}/add_credits/${amount}                                                    ||||      Adding Credits to user by Email
+/user/${email}/delete_session                                                           ||||      Delete User Session ID by Email
+/admin/add/user                                                                         ||||      Add User as an Admin by Email
+/admin/user/${userId}                                                                   ||||      Delete User account by ID
+/user/roles/publisher                                                                   ||||      I don't know what this does. But it requires ownerId Email?
+/admin/gdpr/user                                                                        ||||      General Data Protection Regulation Thing.
+/v1/user                                                                                ||||      Delete User account by Email
+/admin/reset_password/user                                                              ||||      Reset Password for User by Email
+
+// ADMIN TASKS FOR SERVERS
+
+/v2/admin/servers?q=${search}&suspended=${suspended}&limit=${limit}&offset=${offset}    ||||      Suspended a server?
+/server/${id}?byId=true                                                                 ||||      Look up a server using ID
+/server/${name}?byName=true                                                             ||||      Looking a server using Server Name
+/server/${name}/destroy_service_admin                                                   ||||      Force stop a server using Server Name
+/admin/always_online/shutdown                                                           ||||      Shutting Down a server that's always online?
+/admin/${name}/suspend                                                                  ||||      Suspend a server using Server Name with Reason.
+/admin/${name}/release                                                                  ||||      Unsuspend a server using Server Name
+/v2/admin/servers/${serverId}/last_suspension                                           ||||      Checking Server Suspend History using Server Name
+
+// ADMIN TASKS FOR ADDONS
+
+/v1/merchandise/admin/products?managed=true                                             ||||      Managing Minehut Addons?
+/v1/merchandise/admin/products?managed=true&categories=Plugin                           ||||      Managing Minehut Addons?
+/plugin/${pluginId}/delete                                                              ||||      rm -rf'ed the entire database :mind_blowing: (Delete plugin from Minehut Addons)
+/plugins and /pluginData                                                                ||||      Note said "addPlugin"
+/plugin/${pluginId}/edit                                                                ||||      Edit plugins using Plugin ID?
+
+// ADMIN TASKS FOR ICONS
+
+/admin/icon                                                                             ||||      Save Icon using Icon Data?
+/admin/icon/${iconId}                                                                   ||||      Delete Icon using Icon ID :rage:
+/admin/icons                                                                            ||||      Get Current Icon..?
+/v1/admin/icons/shop_configs                                                            ||||      Icon Shop Configs
+/v1/admin/icons/generate_shop_config                                                    ||||      Generate Icon Shop Config
+/v1/admin/icons/remove_server_icon                                                      ||||      Delete Icon you bought back in 2017 using Server ID and Icon ID
+/v1/admin/icons/add_server_icon                                                         ||||      Add an Icon to a Server using Server ID and Icon ID
+
+
+// ADMIN TASKS FOR TRANSACTIONS
+
+/admin/payments/range                                                                   ||||      How much do they pay Admins? Let's find out
+
+// ADMIN TASKS FOR CREDIT TRANSACTIONS
+
+/admin/credits/range                                                                    ||||      I have no idea what is this
+
+// ADMIN TASKS FOR VOTING
+
+/admin/votes/range                                                                      ||||      Vote Credits?
+/admin/voting/set/reward                                                                ||||      Set how much credits will you got from voting
+
+// ADMIN TASKS FOR LOBBY
+
+/network/lobbies/settings                                                               ||||      Lobby Settings?
+/network/lobbies/settings                                                               ||||      Set Join Message and First Join Message
+/network/lobbies/settings                                                               ||||      Set Bossbar Message
+/network/lobbies/settings                                                               ||||      setspawn
+
+// ADMIN TASKS FOR BILLBOARDS
+
+/network/billboard/board                                                                ||||      Get current billboard?
+/network/billboard/board/archived                                                       ||||      Get old billboard?
+/network/billboard/board                                                                ||||      Create a new board
+/network/billboard/board/${boardId}                                                     ||||      Delete bilboard using BoardID
+/network/billboard/board/activate                                                       ||||      Set which board is active using BoardID
+/network/billboard/board/default_image                                                  ||||      Set default board image using Board ID and Image Link
+/network/billboard/image/active                                                         ||||      Get Active Board
+/network/billboard/image/future                                                         ||||      Predicting 2036
+/network/billboard/image/historic                                                       ||||      Go back to 1969
+/network/billboard/image                                                                ||||      Schedule the board
+network/billboard/image/${imageId}                                                      ||||      Delete billboard using imaegID?
+
+// ADMIN BROADCAST
+
+/network/broadcast/events                                                               ||||      Get broadcast events message?
+/network/broadcast/event                                                                ||||      Create broadcast event
+/network/broadcast/event/update                                                         ||||      Update broadcast event
+/network/broadcast/event/${id}                                                          ||||      Remove broadcast event using id
+/network/broadcast                                                                      ||||      Send broadcast message.
+
+// ADMIN SERVER VERSIONS
+
+/v1/admin/server/versions                                                               ||||      Get Server Versions
+/v1/admin/server/version                                                                ||||      Upload Server Jar
+/v1/admin/server/version/${serverVersionId}                                             ||||      Delete Server Version using serverVersionId
+
+// ADMIN SPLASH SCREEN
+
+/network/splash/intents                                                                 ||||      Get splash screen
+/network/splash/intents/data                                                            ||||      Get splash screen data
+/network/splash/worlds                                                                  ||||      Get splash world?
+/network/splash/worlds                                                                  ||||      Upload splash world
+/v1/admin/splash/world/upload/${worldName}                                              ||||      Get world uploading progress? idk
+/network/splash/worlds/${world}                                                         ||||      Delete splash world using world
+/network/splash/settings/${intent}                                                      ||||      Get splash settings
+/network/splash/settings/${intent}                                                      ||||      update splash settings
+/network/splash/preserver/settings                                                      ||||      Get Preserver Settings
+/network/splash/preserver/settings                                                      ||||      Update Preserver Settings
+/network/splash/preserver/settings/${_id}                                               ||||      Delete Preserver Settings
+
+// ADMIN HEATMAPS
+
+/v1/admin/heatmaps/${mapId}/${fromTime}/${toTime}                                       ||||      Get heapmaps data?? idk
+/v1/admin/heatmaps                                                                      ||||      Get heapmaps
+/v1/admin/heatmaps                                                                      ||||      Upload heapmaps
+/v1/admin/heatmaps/${mapId}                                                             ||||      Delete heapmaps by mapId
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
+// NOTE TO Y'ALL: I am not responsible for all the damages. Use at your own risk.
